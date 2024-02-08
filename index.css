@@ -1,7 +1,36 @@
+@import url(https://db.onlinewebfonts.com/c/f0d74efcb3514ddd8b40798b589948d1?family=Compacta+Bold);
+@import url(https://db.onlinewebfonts.com/c/f32cb969a6cf978973854922e9b4fe36?family=Compacta+Light);
+
+@font-face {
+    font-family: "Compacta Bold";
+    src: url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.eot");
+    src: url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.eot?#iefix")format("embedded-opentype"),
+         url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.woff2")format("woff2"),
+         url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.woff")format("woff"),
+         url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.ttf")format("truetype"),
+         url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.svg#Compacta Bold")format("svg");
+}
+
 body {
     background-color:#fdcf99;
 }
 
-.title{
-    display: flex
+.container {
+    font-family: "Compacta Bold";
+    font-size: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
+    align-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.box {
+
+}
+
+.boxtitles{
+    font-family: "Compacta Bold"; 
+    font-size: 50px;
 }
