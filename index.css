@@ -2,35 +2,64 @@
 @import url(https://db.onlinewebfonts.com/c/f32cb969a6cf978973854922e9b4fe36?family=Compacta+Light);
 
 @font-face {
-    font-family: "Compacta Bold";
-    src: url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.eot");
-    src: url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.eot?#iefix")format("embedded-opentype"),
-         url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.woff2")format("woff2"),
-         url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.woff")format("woff"),
-         url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.ttf")format("truetype"),
-         url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.svg#Compacta Bold")format("svg");
+  font-family: "Compacta Bold";
+  src: url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.eot");
+  src: url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.eot?#iefix")format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.woff2")format("woff2"),
+       url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.woff")format("woff"),
+       url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.ttf")format("truetype"),
+       url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.svg#Compacta Bold")format("svg");
 }
 
 body {
-    background-color:#fdcf99;
+  background-color:rgb(253, 207, 153);
 }
 
 .container {
-    font-family: "Compacta Bold";
-    font-size: 150px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column-reverse;
-    align-items: center;
-    align-content: space-around;
-    flex-wrap: nowrap;
+  font-family: "Compacta Bold";
+  font-size: 150px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-items: center;
+  align-content: space-around;
+  flex-wrap: nowrap;
 }
 
-.box {
-
+.menu {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  height: 1000px;
 }
 
-.boxtitles{
-    font-family: "Compacta Bold"; 
-    font-size: 50px;
+.menucontent {
+  font-family: "Compacta Bold"; 
+  font-size: 50px;
+  text-align: left;
+  width: 225px;
+  background-color: rgb(253, 207, 153);
+  border-style: hidden solid hidden hidden;
+  border-color: rgb(201, 115, 16);
+  border-width: 5px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
+  position: relative;
+  cursor: pointer;
+  transition: all ease-in 100ms;
+  
+  
+  transform: trasnform 0.075s ease;
+}
+
+.menucontent:hover {
+  width: 300px;
+  height: 225px;
+  font-size: 70px;
+  transform:scaleX(1.2, 1.2);
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
