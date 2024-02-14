@@ -39,8 +39,10 @@ body {
   font-family: "Compacta Bold"; 
   font-size: 50px;
   text-align: left;
+  
   width: 225px;
   background-color: rgb(253, 207, 153);
+  
   border-style: hidden solid hidden hidden;
   border-color: rgb(201, 115, 16);
   border-width: 5px;
@@ -50,9 +52,10 @@ body {
   position: relative;
   cursor: pointer;
   transition: all ease-in 100ms;
-  
-  
-  transform: trasnform 0.075s ease;
+}
+
+.menu:hover{
+  height: 1000px;
 }
 
 .menucontent:hover {
