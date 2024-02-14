@@ -15,7 +15,7 @@ body {
   background-color:rgb(253, 207, 153);
 }
 
-.container {
+.header {
   font-family: "Compacta Bold";
   font-size: 150px;
   display: flex;
@@ -32,7 +32,7 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 10px;
-  height: 1000px;
+  height: 80%;
 }
 
 .menucontent {
@@ -59,7 +59,10 @@ body {
   width: 300px;
   height: 225px;
   font-size: 70px;
-  transform:scaleX(1.2, 1.2);
-  margin-top: 150px;
-  margin-bottom: 150px;
+}
+
+#headshot{
+  position: relative;
+  left: 50%;
+  top: 80%;
 }
