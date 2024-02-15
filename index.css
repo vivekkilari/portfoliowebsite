@@ -13,6 +13,7 @@
 
 body {
   background-color:rgb(253, 207, 153);
+  
 }
 
 .header {
@@ -31,8 +32,7 @@ body {
   position: absolute;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
-  height: 80%;
+  height: 75%;
 }
 
 .menucontent {
@@ -64,8 +64,27 @@ body {
   font-size: 70px;
 }
 
-#headshot{
+#home{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-color: white;
+  border: solid;
+  border-color: rgb(253, 207, 153);
   position: relative;
-  left: 50%;
-  top: 80%;
+  left: 25%;
+  width: 50%;
+}
+
+#headshot{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border: solid;
+  border-color: rgb(253, 207, 153);
 }
