@@ -13,10 +13,14 @@
 
 body {
   background-color:rgb(253, 207, 153);
-  
+  height: 300vh;
+
 }
 
 .header {
+}
+
+#title{
   font-family: "Compacta Bold";
   font-size: 150px;
   display: flex;
@@ -29,10 +33,11 @@ body {
 
 .menu {
   display: flex;
-  position: absolute;
+  position: fixed;
   flex-direction: column;
   justify-content: center;
   height: 75%;
+  z-index: 1;
 }
 
 .menucontent {
@@ -48,6 +53,9 @@ body {
   border-width: 5px;
   padding-top: 50px;
   padding-bottom: 50px;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
   
   position: relative;
   cursor: pointer;
@@ -55,7 +63,7 @@ body {
 }
 
 .menu:hover{
-  height: 1000px;
+  height: 75%;
 }
 
 .menucontent:hover {
