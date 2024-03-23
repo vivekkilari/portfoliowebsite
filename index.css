@@ -17,7 +17,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 10px;
   
 }
 
@@ -27,6 +27,7 @@
 
 ::-webkit-scrollbar-thumb {
   background: white;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -96,7 +97,7 @@ body {
   font-size: 70px;
 }
 
-#home{
+.homeSection{
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -119,4 +120,15 @@ body {
   margin-bottom: 10%;
   border: solid;
   border-color: var(--lightOrange);
+}
+
+.portfolioSection {
+  display: flex;
+  height: 150%;
+}
+
+#itchioPage {
+  display: flex;
+  position: relative;
+  height: 1.5vh;
 }
