@@ -10,39 +10,52 @@
        url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.ttf")format("truetype"),
        url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.svg#Compacta Bold")format("svg");
 }
-
+/*#region Base*/
 :root {
-  --darkOrange: rgb(201, 115, 16);
+  --lightestOrange: rgb(243, 229, 211);
   --lightOrange: rgb(253, 207, 153);
+  --darkOrange: rgb(201, 115, 16);
+  --darkestOrange: rgb(136, 74, 4);
+}
+
+html {
+  scroll-behavior: smooth  ;
+}
+
+body {
+  width: 100vw;
+  height: 415vh;
+  background-color: var(--lightOrange);
+  margin: 0;
+  border: 0;
+  overflow-x: hidden;
+  background-size: cover;
 }
 
 body::-webkit-scrollbar {
-  width: 1.5em;
-  height: 1.5em;
+  width: 25px;
+  height: 25px;
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--lightOrange);
+  background-color: var(--lightestOrange);
   border-radius: 100vw;
-  margin-block: .5em;
-  margin-inline: .5em;
+  margin-block: -.4em;
+  margin-inline: -.4em;
 }
 
 body::-webkit-scrollbar-thumb {
   background: var(--darkOrange);
-  border: .5em solid var(--lightOrange);
+  border: .5em solid var(--lightestOrange);
   border-radius: 100vw;
 }
 
 body::-webkit-scrollbar-thumb:hover {
   border: 0;
 }
+/*#endregion Base */
 
-body {
-  background-color: var(--lightOrange);
-  height: 300vh;
-}
-
+/*#region HeroSection*/
 .title{
   display: flex;
   position: relative;
@@ -53,12 +66,14 @@ body {
   font-size: 450px;
 }
 
-.homeSection {
+.heroSection {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 95vh;
+  width: 100vw;
+  border: none;
   
   &::before {
     content: '';
@@ -67,68 +82,128 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 80%;
+    opacity: 70%;
     background-image: url('headshot.jpg');
-    background-size: cover;
+    background-size:cover;
     background-position: center;
   }
 }
+/*#endregion HeroSection*/
 
+/*#region Menu*/
 .menu {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 2fr 1fr 2fr;
   flex-direction: row;
   position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   width: 100vw;
-  height: 20vh;
+  height: 5vh;
   z-index: 1;
 }
 
 .menuBoxContent {
-  width: 33vw;
-  flex-grow: 1;
   font-size: 50px;
+  width: 100%;
+  height: 5vh;
   text-align: center;
   font-family: "Compacta Bold"; 
   
-  background-color: var(--darkOrange);
-  /* border-style: hidden hidden solid hidden;
-  border-color: var(--darkOrange); */
-  /* border-width: 5px; */
+  background-color: var(--darkestOrange);
   border: none;
-  padding-inline: 50px;
+  padding-inline: 75px;
 
   cursor: pointer;
   transition: all ease 200ms;
 }
 
 .menuBoxContent:hover {
-  transform-origin: 50% 0;
-  scale: 1.25;
-  border-bottom-left-radius: 1vw;
-  border-bottom-right-radius: 1vw;
-  transition: all ease 200ms;
-
+  scale: 1.15 1.4;
+  border-radius: 1vw;
 }
 
-#box1{
-  text-align: right;
+#box1 {
+  text-decoration-color: black;
+  text-align: end;
+  z-index: 2;
+  left: 0;
 }
 
+#box2 {
+  z-index: 1;
+  left: 40vw;
+}
+
+#box3 {
+  text-align: start;
+  z-index: 2;
+  right: 0;
+}
+/*#endregion Menu*/
+
+/*#region AboutSection*/
+.aboutSection {
+  background-color: var(--lightestOrange);
+  top: 100vh;
+  height: 105vh;
+}
+
+.pictureAndText {
+  display: grid;
+  position: relative;
+  top: 25vw;
+  grid-template-rows: 50vh;
+  grid-template-columns: 50vw 50vw;
+}
+
+.pictureBlock {
+  grid-area: 1 1 2 2;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.textBlock {
+  grid-area: 2 2 3 4;
+  align-self: center;
+  text-align: center;
+}
+/*#endregion AboutMe*/
+
+/*#region PortfolioSection*/
 .portfolioSection {
   display: flex;
   position: absolute;
-  top: 100vh;
+  top: 205vh;
   left: 0;
   right: 0;
-  height: 100vh;
+  height: 105vh;
 }
 
-#itchioPage {
+.itchioGrid {
+  display: grid;
+  position: absolute;
+  grid-template-rows: 100px;
+  grid-template-columns: 100px;
+  top: 25vh;
+  left: 10vw;
+  right: 10vw;
+  width: 80vw;
+  height: 50vh;
+}
+/*#endregion Portfolio*/
+
+/*#region ContactSection*/
+.contactSection {
   display: flex;
   position: absolute;
-  top: 50vh;
-  height: .2vh;
+  top: 310vh;
+  left: 0;
+  right: 0;
+  height: 105vh;
+  background-color: aliceblue;
 }
+
+
+/*#endregion ContactSection*/
