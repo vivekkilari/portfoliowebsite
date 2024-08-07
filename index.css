@@ -68,7 +68,7 @@ body {
     right: 0;
     bottom: 0;
     opacity: 80%;
-    background-image: url('file:///C:/Users/vivek/Development/Cloud/portfoliowebsite/headshot.jpg');
+    background-image: url('headshot.jpg');
     background-size: cover;
     background-position: center;
   }
