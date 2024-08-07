@@ -30,7 +30,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: var(--darkOrange);
-  border: .4em solid var(--lightOrange);
+  border: .5em solid var(--lightOrange);
   border-radius: 100vw;
 }
 
@@ -43,80 +43,92 @@ body {
   height: 300vh;
 }
 
-#title{
+.title{
   display: flex;
+  position: relative;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-
   font-family: "Compacta Bold";
-  font-size: 150px;
+  font-size: 450px;
+}
+
+.homeSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 80%;
+    background-image: url('file:///C:/Users/vivek/Development/Cloud/portfoliowebsite/headshot.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .menu {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
+  flex-direction: row;
+  position: sticky;
   top: 0;
-  height: 100vh;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 20vh;
   z-index: 1;
 }
 
-.menucontent {
-  width: 225px;
+.menuBoxContent {
+  width: 33vw;
+  flex-grow: 1;
   font-size: 50px;
-  text-align: left;
+  text-align: center;
   font-family: "Compacta Bold"; 
   
-  background-color: var(--lightOrange);
-  border-style: hidden solid hidden hidden;
-  border-color: var(--darkOrange);
-  border-width: 5px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  background-color: var(--darkOrange);
+  /* border-style: hidden hidden solid hidden;
+  border-color: var(--darkOrange); */
+  /* border-width: 5px; */
+  border: none;
+  padding-inline: 50px;
 
   cursor: pointer;
-  transition: all ease-in 100ms;
+  transition: all ease 200ms;
 }
 
-.menucontent:hover {
-  width: 300px;
-  font-size: 70px;
+.menuBoxContent:hover {
+  transform-origin: 50% 0;
+  scale: 1.25;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+  transition: all ease 200ms;
+
 }
 
-.homeSection{
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  background-color: white;
-  border: solid;
-  border-color: var(--lightOrange);
-  position: relative;
-  left: 25%;
-  width: 50%;
-}
-
-#headshot{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  border: solid;
-  border-color: var(--lightOrange);
+#box1{
+  text-align: right;
 }
 
 .portfolioSection {
   display: flex;
-  height: 150%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  right: 0;
+  height: 100vh;
 }
 
 #itchioPage {
   display: flex;
-  position: relative;
-  height: 1.5vh;
+  position: absolute;
+  top: 50vh;
+  height: .2vh;
 }
