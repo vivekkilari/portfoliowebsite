@@ -1,15 +1,19 @@
-@import url(https://db.onlinewebfonts.com/c/f0d74efcb3514ddd8b40798b589948d1?family=Compacta+Bold);
-@import url(https://db.onlinewebfonts.com/c/f32cb969a6cf978973854922e9b4fe36?family=Compacta+Light);
+/*#region Fonts*/
+@font-face {
+  font-family: "Compacta";
+  src: url('Fonts/Compacta Light.woff') format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
 
 @font-face {
-  font-family: "Compacta Bold";
-  src: url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.eot");
-  src: url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.eot?#iefix")format("embedded-opentype"),
-       url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.woff2")format("woff2"),
-       url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.woff")format("woff"),
-       url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.ttf")format("truetype"),
-       url("https://db.onlinewebfonts.com/t/f0d74efcb3514ddd8b40798b589948d1.svg#Compacta Bold")format("svg");
+  font-family: "Compacta";
+  src: url('Fonts/Compacta Bold.woff') format("woff");
+  font-weight: bold;
+  font-style: normal;
 }
+/*#endregion Fonts*/
+
 /*#region Base*/
 :root {
   --lightestOrange: rgb(243, 229, 211);
@@ -24,12 +28,12 @@ html {
 
 body {
   width: 100vw;
-  height: 415vh;
-  background-color: var(--lightOrange);
+  height: 400vh;
   margin: 0;
   border: 0;
   overflow-x: hidden;
   background-size: cover;
+  background-color: var(--lightOrange);
 }
 
 body::-webkit-scrollbar {
@@ -62,8 +66,10 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  font-family: "Compacta Bold";
-  font-size: 450px;
+  text-align: center;
+  font-family: "Compacta";
+  font-weight: bold;
+  font-size: 20vw;
 }
 
 .heroSection {
@@ -93,6 +99,7 @@ body::-webkit-scrollbar-thumb:hover {
 /*#region Menu*/
 .menu {
   display: grid;
+  background-color: var(--lightestOrange);
   grid-template-rows: 1;
   grid-template-columns: 2fr 1fr 2fr;
   flex-direction: row;
@@ -104,11 +111,12 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .menuBoxContent {
-  font-size: 50px;
+  font-size: 2vw;
   width: 100%;
   height: 5vh;
   text-align: center;
-  font-family: "Compacta Bold"; 
+  font-family: "Compacta";
+  font-weight: bold; 
   
   background-color: var(--darkestOrange);
   border: none;
@@ -146,15 +154,20 @@ body::-webkit-scrollbar-thumb:hover {
 .aboutSection {
   background-color: var(--lightestOrange);
   top: 100vh;
-  height: 105vh;
+  height: 100vh;
 }
 
 .pictureAndText {
   display: grid;
   position: relative;
-  top: 25vw;
+  justify-content: center;
+  align-items: center;
+  top: 25vh;
+  left: 0;
+  right: 0;
+  gap: 10px;
   grid-template-rows: 50vh;
-  grid-template-columns: 50vw 50vw;
+  grid-template-columns: 50vw 45vw;
 }
 
 .pictureBlock {
@@ -165,9 +178,14 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .textBlock {
-  grid-area: 2 2 3 4;
-  align-self: center;
-  text-align: center;
+  grid-area: 1 2 2 3;
+  margin: 0;
+  text-align: justify;
+  font-family: 'Compacta';
+  font-weight: lighter;
+  font-size: 2vw;
+
+  white-space: pre-line;
 }
 /*#endregion AboutMe*/
 
@@ -175,10 +193,10 @@ body::-webkit-scrollbar-thumb:hover {
 .portfolioSection {
   display: flex;
   position: absolute;
-  top: 205vh;
+  top: 200vh;
   left: 0;
   right: 0;
-  height: 105vh;
+  height: 100vh;
 }
 
 .itchioGrid {
@@ -198,10 +216,10 @@ body::-webkit-scrollbar-thumb:hover {
 .contactSection {
   display: flex;
   position: absolute;
-  top: 310vh;
+  top: 300vh;
   left: 0;
   right: 0;
-  height: 105vh;
+  height: 100vh;
   background-color: aliceblue;
 }
 
