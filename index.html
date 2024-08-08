@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0">
   <title>Vivek Kilari Portfolio</title>
   <link rel="stylesheet" href="index.css" />
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -52,20 +53,30 @@
   </div>
   
   <div class="portfolioSection" id="portfolio">
-    <div class="itchioGrid">
-      <div class="mainGame">
-        <iframe src="https://itch.io/embed-upload/11094883?color=884a04" allowfullscreen="" width="980" height="700" id="mainGame">
+    <div class="gameCarousel">
+      <div class="gameCard" id="firstGame">
+        
+        <div class="glass" id="firstGameGlass">
+          <img class="gameArt" src="blightSpeedArt.png" width="500" height="500">
+          <button onclick="revealGame('firstGameGlass')" class="gameCover"></button>
+          </img>
+        </div>
+
+        <iframe src="https://itch.io/embed-upload/11094883?color=884a04" allowfullscreen="" width="980" height="700" id="firstGameEmbed">
           <a href="https://kilarivi.itch.io/blight-speed">Play Blight Speed on itch.io</a>
         </iframe>
+
       </div>
-        <div id="itchGame1">Game1</div>
-      <div id="itchGame2">Game2</div>
+      <div class="gameCard" id="secondGame">Game1</div>
+      <div class="gameCard" id="thirdGame">Game2</div>
     </div>
   </div>
 
   <div class="contactSection" id="contact">
     
   </div>
+
+  
 </body>
 
 </html>
