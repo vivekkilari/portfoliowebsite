@@ -27,8 +27,6 @@ html {
 }
 
 body {
-  width: 100vw;
-  height: 400vh;
   margin: 0;
   border: 0;
   overflow-x: hidden;
@@ -73,11 +71,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .heroSection {
-  position: relative;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  height: 93vh;
   width: 100vw;
   border: none;
   
@@ -88,7 +86,7 @@ body::-webkit-scrollbar-thumb:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 70%;
+    opacity: 50%;
     background-image: url('headshot.jpg');
     background-size:cover;
     background-position: center;
@@ -97,63 +95,67 @@ body::-webkit-scrollbar-thumb:hover {
 /*#endregion HeroSection*/
 
 /*#region Menu*/
+.menuWrapper {
+  display: flex;
+  position: absolute;
+  height: 300vh;
+}
+
 .menu {
   display: grid;
   background-color: var(--lightestOrange);
-  grid-template-rows: 1;
   grid-template-columns: 2fr 1fr 2fr;
-  flex-direction: row;
   position: sticky;
   top: 0;
   width: 100vw;
-  height: 5vh;
+  height: 7vh;
   z-index: 1;
 }
 
 .menuBoxContent {
-  font-size: 2vw;
+  background-color: var(--darkestOrange);
+  border: solid;
+  border-color: var(--darkestOrange);
   width: 100%;
-  height: 5vh;
-  text-align: center;
+  height: 7vh;
+  
   font-family: "Compacta";
   font-weight: bold; 
+  font-size: 3.5vh;
+  padding-inline: 50px;
   
-  background-color: var(--darkestOrange);
-  border: none;
-  padding-inline: 75px;
-
   cursor: pointer;
-  transition: all ease 200ms;
+  transition: all ease 150ms;
 }
 
 .menuBoxContent:hover {
-  scale: 1.15 1.4;
+  scale: 1.1 1.5;
   border-radius: 1vw;
 }
 
 #box1 {
-  text-decoration-color: black;
   text-align: end;
   z-index: 2;
-  left: 0;
 }
 
 #box2 {
   z-index: 1;
-  left: 40vw;
 }
 
 #box3 {
   text-align: start;
   z-index: 2;
-  right: 0;
 }
 /*#endregion Menu*/
 
 /*#region AboutSection*/
 .aboutSection {
+  display: flex;
+  position: absolute;
   background-color: var(--lightestOrange);
   top: 100vh;
+  left: 0;
+  right: 0;
   height: 100vh;
 }
 
@@ -171,14 +173,12 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .pictureBlock {
-  grid-area: 1 1 2 2;
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
 .textBlock {
-  grid-area: 1 2 2 3;
   margin: 0;
   text-align: justify;
   font-family: 'Compacta';
@@ -202,14 +202,44 @@ body::-webkit-scrollbar-thumb:hover {
 .itchioGrid {
   display: grid;
   position: absolute;
-  grid-template-rows: 100px;
-  grid-template-columns: 100px;
-  top: 25vh;
-  left: 10vw;
-  right: 10vw;
-  width: 80vw;
-  height: 50vh;
+  grid-template-rows: repeat(9, 10vh);
+  grid-template-columns: repeat(9, 10vw);
+  top: 5vh;
+  left: 5vw;
+  right: 5vw;
+  bottom: 5vh;
+  width: fit-content;
+  height: fit-content;
 }
+
+.mainGame {
+  grid-row: 1 / 8;
+  grid-column: 1 / 5;
+  aspect-ratio: 980 / 700;
+  scale: .3;
+}
+
+#mainGame {
+  object-fit: contain;
+  border: none;
+}
+
+#itchGame1 {
+  grid-row: 3 / 4;
+  grid-column: 7 / 8;
+
+  width: 100%;
+  height: 100%;
+}
+
+#itchGame2 {
+  grid-row: 4 / 5;
+  grid-column: 7 / 8;
+
+  width: 100%;
+  height: 100%;
+}
+
 /*#endregion Portfolio*/
 
 /*#region ContactSection*/

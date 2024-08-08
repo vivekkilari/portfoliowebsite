@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0">
   <title>Vivek Kilari Portfolio</title>
   <link rel="stylesheet" href="index.css" />
 </head>
@@ -14,51 +14,52 @@
     <h1 class="title">VIVEK KILARI</h1>
   </div>
   
-  <div class="menu">
-    <div>
-      <a href="#about" style="color: inherit; text-decoration: none;">
-        <button class="menuBoxContent" id="box1">About</button>
-      </a>
-    </div>
+  <div class="menuWrapper">
+    <div class="menu">
+      <div>
+        <a href="#about" style="color: inherit; text-decoration: none;">
+          <button class="menuBoxContent" id="box1">About</button>
+        </a>
+      </div>
 
-    <div>
-      <a href="#portfolio" style="color: inherit; text-decoration: none;">
-        <button class="menuBoxContent" id="box2">Portfolio</button>
-      </a>
-    </div>
+      <div>
+        <a href="#portfolio" style="color: inherit; text-decoration: none;">
+          <button class="menuBoxContent" id="box2">Portfolio</button>
+        </a>
+      </div>
 
-    <div>
-      <a href="#contact" style="color: inherit; text-decoration: none;">
-        <button class="menuBoxContent" id="box3">Contact</button>
-      </a>
+      <div>
+        <a href="#contact" style="color: inherit; text-decoration: none;">
+          <button class="menuBoxContent" id="box3">Contact</button>
+        </a>
+      </div>
     </div>
   </div>
+
 
   <div class="aboutSection" id="about">
     <div class="pictureAndText">
       <img src="headshot.jpg" class="pictureBlock">
-      <p class="textBlock">I am a student at <span style="background: linear-gradient(to bottom, #18453B, #008208, #0B9A6D); background-clip:initial; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"> Michigan State University</span> who is double majoring in Games & Interactive Media and Political Science. 
+      <p class="textBlock">I am a student at <span style="background: linear-gradient(to top, #18453B, #008208, #0B9A6D); background-clip:initial; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"> Michigan State University</span> who is double majoring in Games & Interactive Media and Political Science. 
         
         I'm a game developer, creative thinker, artist, and constant learner. 
         
-        I have experience developing with C#, Java, HTML, Python, and C++. I've also used tools such as Unity, Blender, and Unreal Engine. 
+        I have experience developing with C#, Java, HTML, Python, and C++. I'm also experienced with industry standard tools like Unity, Blender, and Unreal Engine. 
         
-        I have made both personal projects games as well as small games for my university classes. I've participated in three game jams, winning multiple awards in the process.
+        I have made videogames for personal projects, university classes, and multiple game jams which have received multiple awards in the process.
       </p>
     </div>
   </div>
   
   <div class="portfolioSection" id="portfolio">
     <div class="itchioGrid">
-      <a href="https://kilarivi.itch.io/" class="mainGame">
-      <img src="https://static.itch.io/images/logo-black-new.svg", alt="itch.io">
-      </a>
-      <div id="itchGame1">
-  
+      <div class="mainGame">
+        <iframe src="https://itch.io/embed-upload/11094883?color=884a04" allowfullscreen="" width="980" height="700" id="mainGame">
+          <a href="https://kilarivi.itch.io/blight-speed">Play Blight Speed on itch.io</a>
+        </iframe>
       </div>
-      <div id="itchGame2">
-  
-      </div>
+        <div id="itchGame1">Game1</div>
+      <div id="itchGame2">Game2</div>
     </div>
   </div>
 
