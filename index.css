@@ -314,9 +314,6 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 2rem;
 
   padding-inline: .33em;
-
-  /* background-color: salmon; */
-  
 }
 
 .infoBlock {
