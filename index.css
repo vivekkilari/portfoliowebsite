@@ -38,7 +38,7 @@ body {
   margin: 0;
   border: 0;
   background-size: cover;
-  background-color: var(--Color1);
+  background-color: aliceblue;
 }
 
 body::-webkit-scrollbar {
@@ -106,6 +106,7 @@ body::-webkit-scrollbar-thumb:hover {
 /*#region Menu*/
 .menuWrapper {
   position: absolute;
+  width: 100vw;
   top: 93vh;
   height: 250vh;
 }
@@ -113,18 +114,18 @@ body::-webkit-scrollbar-thumb:hover {
 .menu {
   display: flex;
   position: sticky;
-  width: 100%;
+  width: 100vw;
   height: 7vh;
   top: 0;
-  left: 0;
   z-index: 1;
-  
+
   background-color: var(--Color1);
 }
 
 .menuBoxContent {
-  width: 33vw;
+  width: calc(100vw / 3);
   height: 7vh;
+
   border: solid;
   border-color: var(--Color4);
   background-color: var(--Color4);
@@ -137,7 +138,7 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 3rem;
   }  
 
-  font-size: 2rem;
+  font-size: 5vw;
   
   cursor: pointer;
   transition: all ease 150ms;
@@ -202,13 +203,13 @@ body::-webkit-scrollbar-thumb:hover {
 
   font-family: 'Compacta';
   font-weight: lighter;
-  font-size: 1.5rem;
+  font-size: 3rem;
   text-align: justify;
   text-shadow: -4px 0px 0px white;
   
   @media (max-width: 1000px) {
     overflow: scroll;
-    font-size: 2.5rem;
+    font-size: 1rem;
   }
   
 
@@ -349,11 +350,14 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: column;
 
   object-fit: contain;
+  padding-inline: .33em;
 
   font-family: 'Compacta';
   font-size: 2rem;
-
-  padding-inline: .33em;
+  @media (max-width: 1000px) {
+    font-size: 1rem;
+  }
+  
 }
 
 .infoBlock {
