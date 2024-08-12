@@ -2,6 +2,7 @@ const hero = document.getElementById("hero");
 const titleShadow = document.getElementById("titleShadow");
 const gameCarousel = document.querySelector(".gameCarousel");
 const glasses = document.querySelectorAll(".glass");
+const iframes = document.querySelectorAll("iframe");
 
 var mouseX = 0;
 var mouseY = 0;
@@ -21,6 +22,7 @@ window.onmousedown = e => {
 
 window.onmouseup = e => {
   gameCarousel.dataset.mouseDownAt = "0";
+  gameCarousel.dataset.prevPercentage = gameCarousel.dataset.percentage;
 }
 
 gameCarousel.addEventListener("click", e => {
@@ -58,16 +60,30 @@ function animateHero(e) {
 function carouselMove(e) {
   if(gameCarousel.dataset.mouseDownAt === "0") return;
   const mouseDelta = parseFloat(gameCarousel.dataset.mouseDownAt) - e.clientX;
-  const maxDelta = window.innerWidth / 2;
+  const maxDelta = window.innerWidth / 1;
 
-  const percentage = (mouseDelta / maxDelta) * -100;
+  var percentage = (mouseDelta / maxDelta) * -100;
+  var nextPercentage = parseFloat(gameCarousel.dataset.prevPercentage) + percentage;
 
-  gameCarousel.style.transform = `translate(${percentage}%)`;
+  nextPercentage = Math.min(nextPercentage, 33);
+  nextPercentage = Math.max(nextPercentage, -33);
+
+  gameCarousel.dataset.percentage = nextPercentage;
+
+  // gameCarousel.style.transform = `translate(${nextPercentage}%)`;
+
+  gameCarousel.animate({
+    transform: `translate(${nextPercentage}%)`
+  }, {
+    duration: 1200,
+    fill: "forwards"
+  })
 }
 
-function revealGame(id) {
+function revealGame(glassId, frameId) {
   hideAllGames()
-  document.getElementById(String(id)).dataset.activeStatus = 'active';
+  document.getElementById(String(glassId)).dataset.activeStatus = 'active';
+  document.getElementById(String(frameId)).muted = true;
 }
 
 function hideAllGames() {
@@ -75,6 +91,10 @@ function hideAllGames() {
   glasses.forEach((g) => {
     g.dataset.activeStatus = "inactive";
   });
+
+  iframes.forEach((i) => {
+    i.muted = true;
+  })
 }
 
 function heroParallax() {
