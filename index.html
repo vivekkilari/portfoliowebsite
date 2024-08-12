@@ -55,41 +55,40 @@
   </div>
   
   <div class="portfolioSection section" id="portfolio">
-    <div class="gameCarousel">
+    <div class="gameCarousel" draggable="false" data-mouse-down-at="0">
       <div class="gameCard" id="firstGame">
-        
-        <div class="glass" id="firstGameGlass">
+        <div class="glass" id="firstGameGlass" data-active-status="inactive">
           <img class="gameArt" src="Images/blightSpeedArt.png" width="500" height="500">
           <button onclick="revealGame('firstGameGlass')" class="gameCover"></button>
           </img>
         </div>
 
-        <iframe src="https://itch.io/embed-upload/11094883?color=884a04" allowfullscreen="" width="980" height="700" class="gameEmbed">
+        <iframe src="https://itch.io/embed-upload/11094883?color=884a04" allowfullscreen="" width="1920" height="1080" class="gameEmbed">
           <a href="https://kilarivi.itch.io/blight-speed">Play Blight Speed on itch.io</a>
         </iframe>
 
       </div>
 
       <div class="gameCard" id="secondGame">
-        <div class="glass" id="secondGameGlass">
+        <div class="glass" id="secondGameGlass"  data-active-status="inactive">
           <img class="gameArt" src="Images/blightSpeedArt.png" width="500" height="500">
-          <button onclick="revealGame('secondGameGlass')" class="gameCover"></button>
+          <button onclick="revealGame('secondGameGlass');" class="gameCover"></button>
           </img>
         </div>
 
-        <iframe frameborder="0" src="https://itch.io/embed-upload/9658697?color=333333" allowfullscreen="" width="1280" height="800" class="gameEmbed">
+        <iframe frameborder="0" src="https://itch.io/embed-upload/9658697?color=333333" allowfullscreen="" width="1920" height="1080" class="gameEmbed">
           <a href="https://gabe-davis.itch.io/lasic">Play L.A.S.I.C. on itch.io</a>
         </iframe>
       </div>
 
       <div class="gameCard" id="thirdGame">
-        <div class="glass" id="thirdGameGlass">
+        <div class="glass" id="thirdGameGlass"  data-active-status="inactive">
           <img class="gameArt" src="Images/blightSpeedArt.png" width="500" height="500">
           <button onclick="revealGame('thirdGameGlass')" class="gameCover"></button>
           </img>
         </div>
 
-        <iframe src="https://itch.io/embed-upload/11094883?color=884a04" allowfullscreen="" width="980" height="700" class="gameEmbed">
+        <iframe src="https://itch.io/embed-upload/9053184?color=333333" allowfullscreen="" width="1920" height="1080" class="gameEmbed">
           <a href="https://kilarivi.itch.io/blight-speed">Play Blight Speed on itch.io</a>
         </iframe>
       </div>
@@ -132,6 +131,8 @@
       </div>
     </div>
   </div>
+
+  
   <script src="index.js"></script>
 </body>
 
