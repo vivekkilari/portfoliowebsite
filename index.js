@@ -16,7 +16,7 @@ window.onmousemove = e => {
   carouselMove(e);
 }
 
-window.onmousedown = e => {
+gameCarousel.onmousedown = e => {
   gameCarousel.dataset.mouseDownAt = e.clientX;
 }
 
@@ -45,16 +45,28 @@ function animateHero(e) {
   const maxX = hero.offsetWidth - window.innerWidth;
   const maxY = hero.offsetHeight - window.innerHeight;
   
-  panX = maxX * xDecimal * -.05;
-  panY = maxY * yDecimal * -.05;
+  panX = maxX * xDecimal * -.1;
+  panY = maxY * yDecimal * -.1;
   
   hero.animate({
     transform: `translate(${panX}px, ${panY + rate}px)`
   }, {
     duration: 1000,
     fill: "forwards",
-    easing: "ease"
   })
+}
+
+function heroParallax() {
+  var scrolled = window.scrollY;
+  rate = scrolled * .33;
+
+
+  hero.animate({
+    transform: `translate(${panX}px, ${panY + rate}px)`
+  }, {
+    fill: "forwards",
+    easing: "ease-in-out"
+  });
 }
 
 function carouselMove(e) {
@@ -76,7 +88,7 @@ function carouselMove(e) {
     transform: `translate(${nextPercentage}%)`
   }, {
     duration: 1200,
-    fill: "forwards"
+    fill: "both"
   })
 }
 
@@ -96,17 +108,3 @@ function hideAllGames() {
     i.muted = true;
   })
 }
-
-function heroParallax() {
-  var scrolled = window.scrollY;
-  rate = scrolled * .33;
-
-
-  hero.animate({
-    transform: `translate(${panX}px, ${panY + rate}px)`
-  }, {
-    fill: "forwards",
-    easing: "ease-in-out"
-  });
-}
-

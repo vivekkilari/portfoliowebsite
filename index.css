@@ -77,16 +77,24 @@ body::-webkit-scrollbar-thumb:hover {
 /*#region HeroSection*/
 .heroSection {
   display: flex;
+  left: 0;
+  width: 100vw;
   height: 92.99vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
   position: absolute;
+  width: 100vw;
+  left: 0;
+  
   text-align: center;
   font-family: "Compacta";
   font-weight: bold;
   font-size: 20vw;
   color: black;
+  transform: translate(0px);
 
   text-shadow: 10px 5px 0px rgba(0, 0, 0, 0.33);
 }
@@ -106,7 +114,7 @@ body::-webkit-scrollbar-thumb:hover {
   background-image: url('Images/headshot.jpg');
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: hue;
-  filter: blur(15px);
+  filter: blur(10px);
 
   z-index: -1;
 }
@@ -144,22 +152,21 @@ body::-webkit-scrollbar-thumb:hover {
   
   font-family: "Compacta";
   font-weight: bold; 
+  font-size: 5vw;
   padding-inline: 50px;
-  
+
   @media (min-width: 1000px){
     font-size: 3rem;
   }  
 
-  font-size: 5vw;
-  
   user-select: none;
   cursor: pointer;
-  transition: all ease 150ms;
+  transition: all ease 100ms;
 }
 
 .menuBoxContent:hover {
-  scale: 1.1 1.5;
-  border-radius: 1vw;
+  transform: scale(1.1, 1.4);
+  border-radius: 2vw;
 }
 
 #box1 {
@@ -278,7 +285,6 @@ body::-webkit-scrollbar-thumb:hover {
   width: fit-content;
   height: fit-content;
   scale: .8;
-
 }
 
 .gameArt {
