@@ -18,16 +18,15 @@ window.onmousemove = e => {
 
 gameCarousel.onmousedown = e => {
   gameCarousel.dataset.mouseDownAt = e.clientX;
+  iframes.forEach((g) => {
+    g.pause();
+  })
 }
 
 window.onmouseup = e => {
   gameCarousel.dataset.mouseDownAt = "0";
   gameCarousel.dataset.prevPercentage = gameCarousel.dataset.percentage;
 }
-
-gameCarousel.addEventListener("click", e => {
-
-})
 
 window.addEventListener("scroll", e => {
   heroParallax();

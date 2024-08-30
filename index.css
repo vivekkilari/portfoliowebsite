@@ -37,6 +37,7 @@ body {
   height: fit-content;
 
   top: 0;
+  left: 0;
   margin: 0;
   border: 0;
   background-size: cover;
@@ -71,6 +72,8 @@ body::-webkit-scrollbar-thumb:hover {
   align-items: center;
   width: 100vw;
   height: 100vh;
+
+  left: 0;
 }
 /*#endregion Base */
 
@@ -152,13 +155,10 @@ body::-webkit-scrollbar-thumb:hover {
   
   font-family: "Compacta";
   font-weight: bold; 
-  font-size: 5vw;
+  font-size: 3vh;
   padding-inline: 50px;
 
-  @media (min-width: 1000px){
-    font-size: 3rem;
-  }  
-
+  
   user-select: none;
   cursor: pointer;
   transition: all ease 100ms;
@@ -223,7 +223,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .textBlock {
   position: relative;
-  max-height: 600px;
+  max-height: 75vh;
   margin: 0;
 
   font-family: 'Compacta';
@@ -234,8 +234,8 @@ body::-webkit-scrollbar-thumb:hover {
   
   @media (max-width: 1400px) {
     overflow: scroll;
-    word-break: break-all;
-
+    word-break: normal;
+    text-align: start;
   }
 
   white-space: pre-line;
@@ -270,7 +270,7 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   position: relative;
   width: fit-content;
-  height: 90vh;
+  height: 100vh;
   top: 5vh;
 
   justify-content: space-evenly;
@@ -284,7 +284,12 @@ body::-webkit-scrollbar-thumb:hover {
 .gameCard {
   width: fit-content;
   height: fit-content;
+  aspect-ratio: 16 / 9;
   scale: .8;
+
+  @media (max-width: 500px) {
+    scale: .4;
+  }
 }
 
 .gameArt {
