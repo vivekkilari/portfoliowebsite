@@ -137,9 +137,11 @@ body::-webkit-scrollbar-thumb:hover {
 .menu {
   display: flex;
   position: sticky;
+  flex-wrap: wrap;
   width: 100vw;
   height: 7vh;
-  top: 0;
+  top: 0; 
+  left: 0;
 
   pointer-events: all;
   background-color: var(--baseColor);
@@ -156,12 +158,12 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: "Compacta";
   font-weight: bold; 
   font-size: 3vh;
-  padding-inline: 50px;
-
   
   user-select: none;
   cursor: pointer;
   transition: all ease 100ms;
+
+  min-width: fit-content;
 }
 
 .menuBoxContent:hover {
@@ -231,9 +233,10 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 3rem;
   text-align: justify;
   text-shadow: -4px 0px 0px rgba(255, 255, 255, 0.342);
+
+  overflow: auto;
   
   @media (max-width: 1400px) {
-    overflow: scroll;
     word-break: normal;
     text-align: start;
   }
@@ -260,6 +263,7 @@ body::-webkit-scrollbar-thumb:hover {
 /*#region PortfolioSection*/
 .portfolioSection {
   display: flex;
+  justify-content: center;
 
   background-color: white;
   background-image: linear-gradient(to bottom, var(--baseColor), rgba(122, 122, 122, 0.267), rgba(0, 0, 0, 0.425), rgba(109, 109, 109, 0.322), var(--tertiaryColor));
@@ -272,24 +276,43 @@ body::-webkit-scrollbar-thumb:hover {
   width: fit-content;
   height: 100vh;
   top: 5vh;
+  left: 0;
 
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-around;
+  align-items: space-around;
   
   user-select: none;
 
   z-index: 2;
+
+  @media (min-width: 200px) {
+    scale: .15;
+  }
+
+  @media (min-width: 400px) {
+    scale: .2;
+  }
+
+  @media (min-width: 800px) {
+    scale: .4;
+  }
+
+  @media (min-width: 1000px) {
+    scale: .6;
+  }
+
+  @media (min-width: 1500px) {
+    scale: .8;
+  }
 }
 
 .gameCard {
   width: fit-content;
   height: fit-content;
   aspect-ratio: 16 / 9;
-  scale: .8;
 
-  @media (max-width: 500px) {
-    scale: .4;
-  }
+  scale: .8;
+  
 }
 
 .gameArt {
