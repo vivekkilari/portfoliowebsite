@@ -14,7 +14,7 @@
     background-size: contain;
     background-blend-mode: overlay;
     background-color: var(--color-night-light);
-    background-image: url("images/grain_tex.svg");
+    background-image: url("./images/grain_tex.svg");
 }
 
 body {
@@ -67,7 +67,7 @@ a:hover {
     background-size: contain;
     background-blend-mode: overlay;
     background-color: var(--color-night-light);
-    background-image: url("images/grain_tex.svg");
+    background-image: url("./images/grain_tex.svg");
 }
 
 .spacer {
@@ -83,7 +83,7 @@ a:hover {
     background-size: fill;
     background-blend-mode: overlay;
     background-color: var(--color-night-main);
-    background-image: url("images/grain_tex.svg");
+    background-image: url("./images/grain_tex.svg");
 }
 
 .portfolio-blocks {
